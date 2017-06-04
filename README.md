@@ -17,7 +17,7 @@ The game is structured as a sequence of situations, each with a set of choices t
 
 ## Contains examples of
 
-* Data-driven game logic, using 
+* Data-driven game logic.
 * Dynamic reuse of Scene2D GUI-components.
 * Custom Scene2D actors
 * Basic handling of high-DPI scaling.
