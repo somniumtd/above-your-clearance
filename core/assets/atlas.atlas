@@ -1,0 +1,83 @@
+
+atlas.png
+size: 512,512
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+btn_d
+  rotate: false
+  xy: 1, 35
+  size: 32, 32
+  split: 10, 10, 11, 13
+  pad: 10, 10, 11, 14
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+btn_h
+  rotate: false
+  xy: 259, 293
+  size: 32, 32
+  split: 10, 10, 11, 13
+  pad: 10, 10, 11, 14
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+btn_u
+  rotate: false
+  xy: 1, 1
+  size: 32, 32
+  split: 10, 10, 11, 13
+  pad: 10, 10, 11, 14
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+font
+  rotate: false
+  xy: 1, 69
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 0
+popupback
+  rotate: false
+  xy: 35, 35
+  size: 32, 32
+  split: 10, 10, 11, 13
+  pad: 10, 10, 11, 14
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+windowback
+  rotate: false
+  xy: 35, 35
+  size: 32, 32
+  split: 10, 10, 11, 13
+  pad: 10, 10, 11, 14
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+px
+  rotate: false
+  xy: 293, 324
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+uipanel
+  rotate: false
+  xy: 259, 259
+  size: 32, 32
+  split: 10, 10, 11, 13
+  pad: 10, 10, 11, 14
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+uisection
+  rotate: false
+  xy: 259, 259
+  size: 32, 32
+  split: 10, 10, 11, 13
+  pad: 10, 10, 11, 14
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
