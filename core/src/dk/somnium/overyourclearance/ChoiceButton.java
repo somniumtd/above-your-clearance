@@ -48,12 +48,7 @@ public class ChoiceButton extends TextButton {
 			setVisible(false);
 		} else
 		{
-			String text = choice.description;
-			text = text.replaceAll("<name>", model.name);
-			if (text.equals("<wait>"))
-			{
-				text = Model.generateRandomWaitText();
-			}
+			String text = model.substituteTokens(choice.description);
 			setText(text);
 			listener.choice = choice;
 			setTouchable(Touchable.enabled);

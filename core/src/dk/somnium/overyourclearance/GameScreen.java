@@ -186,12 +186,7 @@ public class GameScreen implements Screen {
 	 */
 	public void refreshButtons() {
 		Node node = model.getCurrentNode();
-		String description = node.description;
-		description = description.replaceAll("<name>", model.name); // Handle "<name>" special tag - replaced with the players current name.
-		if (description.contains("<debriefing>")) // Handle "<debriefing>" special tag - replaced with briefing results generated from how well the player did,
-		{
-			description = description.replaceAll("<debriefing>", model.generateDebriefing());
-		}
+		String description = model.substituteTokens(node.description);
 		output.setText(description);
 		for (ChoiceButton button : choices)
 		{

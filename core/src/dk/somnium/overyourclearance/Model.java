@@ -478,13 +478,37 @@ public class Model {
 		return meetsRequirement;
 	}
 	
+	/**
+	 * Substitute static tokens with current world/player values.
+	 * @param rawText
+	 * @return
+	 */
+	public String substituteTokens(String rawText)
+	{
+		String substitutedText = rawText;
+		
+		// Handle "<name>" special token - replaced with the players current name.
+		substitutedText = substitutedText.replaceAll("<name>", name);
+		
+		// Handle "<wait>" special token - replaced with a random waiting text, to give the illusion of multiple different waiting nodes.
+		substitutedText = substitutedText.replaceAll("<wait>", generateRandomWaitText());
+		
+		// Handle "<debriefing>" special token - replaced with briefing results generated from how well the player did,
+		if (substitutedText.contains("<debriefing>"))
+		{
+			substitutedText = substitutedText.replaceAll("<debriefing>", generateDebriefing());
+		}
+		
+		return substitutedText;
+	}
+	
 	final static String[] waitTexts = {"Keep waiting - patience is good Citizenship", "Keep waiting, I think the line moved a bit", "Keep waiting, humming softly to pass the time", "Keep waiting - the other Citizens were here first", "Keep waiting - eventually, my turn will come", "Keep waiting - patience is a virtue", "Keep waiting - my turn is bound to come up any time now", "Keep waiting - I have already spent credits on standing in line, so I might as well stay a bit longer", "Keep waiting - an orderly line is the responsibility of every good Citizen"};
 
 	/**
 	 * Generates a random line for the "<wait>" special token. 
 	 * @return
 	 */
-	public static String generateRandomWaitText() {
+	public String generateRandomWaitText() {
 		return waitTexts[rnd.nextInt(waitTexts.length)]; 
 	}
 
